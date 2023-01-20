@@ -1,0 +1,447 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: base;
+  src: url(../fuentes/HighriseFont-Demo-Regular.otf);
+}
+@font-face {
+  font-family: Nave;
+  src: url(../fuentes/BebasNeue-Regular.otf);
+}
+@font-face {
+  font-family: todo;
+  src: url(/assets/fuentes/Montserrat-Bold.ttf);
+}
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: todo;
+  background-image: url(../img/background/Background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+body header {
+  width: 100%;
+  height: 100px;
+}
+body header nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body header nav .logo {
+  font-size: 20px;
+  color: white;
+  margin-left: 20px;
+}
+@media screen and (min-width: 768px) {
+  body header nav .logo {
+    margin-left: 50px;
+  }
+}
+body header nav .menu-btn {
+  font-size: 25px;
+  color: white;
+  margin-right: 20px;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  body header nav .menu-btn {
+    display: none;
+  }
+}
+body header nav #check {
+  display: none;
+}
+body header nav #check:checked ~ .nav-menu {
+  height: 100Vh;
+}
+body header nav #check:checked ~ .nav-menu li {
+  display: block;
+}
+body header nav .nav-menu {
+  position: fixed;
+  right: 0;
+  width: 300px;
+  height: 0Vh;
+  top: 100px;
+  background: rgba(0, 0, 0, 0.798);
+  text-align: center;
+  transition: all 0.5s;
+  border-radius: 10px 0px;
+}
+body header nav .nav-menu li {
+  display: none;
+  line-height: 30px;
+  margin: 50px 0;
+  transition: all 0.5s;
+}
+@media screen and (min-width: 768px) {
+  body header nav .nav-menu li {
+    display: inline-block;
+    line-height: 100px;
+    margin: 0px 20px;
+    transition: none;
+  }
+}
+body header nav .nav-menu a {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+body header nav .nav-menu a .active, body header nav .nav-menu a:hover {
+  color: rgb(255, 6, 6);
+  transition: 0.2s;
+}
+@media screen and (min-width: 768px) {
+  body header nav .nav-menu {
+    position: relative;
+    height: 100px;
+    width: 700px;
+    top: 0;
+    background: none;
+    transition: none;
+    text-align: right;
+    margin-right: 50px;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+
+.banner {
+  text-align: center;
+  color: white;
+}
+.banner h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.banner h1 span {
+  color: aqua;
+}
+@media screen and (min-width: 768px) {
+  .banner h1 {
+    font-size: 80px;
+  }
+}
+.banner h2 {
+  font-size: 14px;
+  color: rgb(227, 233, 238);
+  text-shadow: 9px 1px 4px #120805;
+}
+@media screen and (min-width: 768px) {
+  .banner h2 {
+    font-size: 24px;
+  }
+}
+.banner .buttom1 {
+  padding: 10px 20px;
+  background-color: steelblue;
+  color: white;
+  border-radius: 20px;
+  margin: 0px 10px;
+  font-size: 10px;
+}
+@media screen and (min-width: 768px) {
+  .banner .buttom1 {
+    font-size: 15px;
+  }
+}
+.banner .buttom1:hover {
+  background-color: white;
+  color: steelblue;
+  transition: 0.5s;
+}
+
+.productos {
+  width: 1240px;
+  margin: auto;
+  display: block;
+  margin-top: 10px;
+  transition: all 0.5s;
+}
+.productos .contenedor {
+  float: left;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 240px;
+  background: rgba(0, 0, 0, 0.398);
+  height: 420px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.productos .contenedor .img_contenedor {
+  display: block;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+.productos .contenedor .img_contenedor img {
+  width: 100%;
+}
+.productos .contenedor .info-contenedor {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 110px;
+  padding: 10px 20px;
+  color: white;
+}
+.productos .contenedor .info-contenedor .titulo {
+  padding: 0;
+  margin: 10px 0;
+  font-size: 22px;
+  color: white;
+}
+.productos .contenedor .btn-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  text-align: center;
+  height: 40px;
+  margin-top: 50px;
+}
+.productos .contenedor .btn {
+  width: 100%;
+  padding: 6px 0;
+  text-decoration: none;
+  background: linear-gradient(125deg, #00ff35 0%, #0091a7 60%);
+  color: #fff;
+  border-radius: 12px;
+}
+@media screen and (max-width: 860px) {
+  .productos {
+    width: 562px;
+    height: 728px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .productos {
+    width: 280px;
+    height: 1496px;
+  }
+}
+
+.contactos {
+  width: 1240px;
+  margin: auto;
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+  transition: all 0.5s;
+}
+.contactos .aviso-box {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactos .aviso-box input {
+  width: 50%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.398);
+  text-align: center;
+  border-radius: 50px;
+  border: solid;
+}
+@media screen and (max-width: 860px) {
+  .contactos .aviso-box input {
+    width: 300px;
+    height: 30px;
+  }
+}
+.contactos .aviso-box ::placeholder {
+  color: white;
+}
+.contactos .metodos-box {
+  display: flex;
+  justify-content: center;
+}
+.contactos .metodos-box .metod1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 400px;
+}
+.contactos .metodos-box .metod1 img {
+  width: 200px;
+  height: 200px;
+}
+@media screen and (max-width: 860px) {
+  .contactos .metodos-box .metod1 img {
+    width: 100px;
+    height: 100px;
+  }
+}
+.contactos .metodos-box .metod1 a {
+  color: white;
+  font-size: 21px;
+  text-align: center;
+}
+@media screen and (max-width: 860px) {
+  .contactos .metodos-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 860px) {
+  .contactos {
+    width: 562px;
+    height: 728px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contactos {
+    width: 280px;
+    height: 100vh;
+  }
+  .aviso-box input {
+    width: 100%;
+    height: 30px;
+  }
+}
+.nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 80px 0;
+}
+.nosotros .tittle {
+  color: white;
+  font-size: 20px;
+  text-shadow: 9px 1px 4px #120805;
+}
+@media screen and (max-width: 860px) {
+  .nosotros .tittle {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 618px) {
+  .nosotros .tittle {
+    font-size: 10px;
+  }
+}
+.nosotros .descripcion {
+  margin: 40px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 40px;
+}
+.nosotros .descripcion span {
+  color: aqua;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.nosotros .descripcion p {
+  text-align: center;
+  color: white;
+}
+.nosotros .box-objetivos {
+  display: flex;
+  /*flex-wrap: wrap;*/
+  margin: 0px 25px;
+}
+.nosotros .box-objetivos .objetivos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  border: solid;
+  color: white;
+  margin: 10px;
+  background: rgba(18, 8, 5, 0.4941176471);
+}
+.nosotros .box-objetivos .objetivos p {
+  text-align: center;
+  padding: 10px;
+  color: aqua;
+}
+@media screen and (max-width: 618px) {
+  .nosotros .box-objetivos {
+    flex-direction: column;
+    margin: 0px 30px;
+  }
+}
+
+.formulario {
+  width: 500px;
+  background: #24303c;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  color: white;
+}
+.formulario h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 860px) {
+  .formulario h4 {
+    font-size: 17px;
+    text-align: center;
+  }
+}
+.formulario .space {
+  width: 100%;
+  background: #24303c;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1 solid #0f79e3;
+  font-size: 18px;
+  color: white;
+}
+@media screen and (max-width: 860px) {
+  .formulario .space {
+    font-size: 10px;
+  }
+}
+.formulario .btn {
+  width: 100%;
+  background: #0f79e3;
+  border: none;
+  margin: 40px 0px 0px;
+  padding: 14px;
+  border-radius: 12px;
+  color: white;
+  font-size: 18px;
+}
+@media screen and (max-width: 860px) {
+  .formulario .btn {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .formulario {
+    width: 300px;
+  }
+}
